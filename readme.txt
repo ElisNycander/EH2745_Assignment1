@@ -97,4 +97,9 @@ These functions are recursive so that they call themselves. The topology process
 is not very efficient, becase the same terminal may be transversed several times, 
 but this is not a problem for small networks. 
 
-   
+
+******************************************
+VIDEO
+******************************************
+Too large to fit repository. Link:
+https://kth.box.com/s/vl2syppsgkdw6ay65n6t7vctavqrw2lm
