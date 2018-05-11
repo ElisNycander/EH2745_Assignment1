@@ -81,17 +81,47 @@ registry, if these fields are found.
 * object_foreign_keys - Dict deciding which foreign keys should be stored for 
 all classes in registry. 
 
+******************************************
+CLASSES
+******************************************
+The main classes are: 
+
+* ParseXMLtoCIM - class containing python database and methods for parsing xml files and 
+creating bus-branch model 
+
+Classes for creating bus-branch model: 
+
+* Bus 
+* Branch
+* Generator 
+* Load 
+* Shunt 
+
+******************************************
+USED LIBRARIES 
+****************************************** 
+
+Main libraries:  
+* CIM15.IEC61970 - CIM classes  
+* sqlite3 - Creating SQLite db with python 
+* xml.etree.ElementTree - Parse xml files 
+
+Other imports:
+* re 
+* pprint
+* prettytable 
+* math 
+* sys 
+
 
 ******************************************
 NOTES
 ******************************************
 
-1. The XML files are parsed only once. 
-
-2. The SQLITE database is not used for anything. The tables are just created
+1. The SQLITE database is not used for anything. The tables are just created
 and populated with the objects. 
 
-3. For the topology processing group_connectivity_nodes() is the main function. 
+2. For the topology processing group_connectivity_nodes() is the main function. 
 It relies on other functions like find_connected_nodes() and find_base_voltages(). 
 These functions are recursive so that they call themselves. The topology processing 
 is not very efficient, becase the same terminal may be transversed several times, 
